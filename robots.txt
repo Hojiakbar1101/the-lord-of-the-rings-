@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://hojiakbar1101.github.io/the-lord-of-the-rings-/sitemap.xml
+

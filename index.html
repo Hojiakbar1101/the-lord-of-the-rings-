@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Uzuklar Hukmdori – Fantasy Portal</title>
+<meta name="description" content="Uzuklar hukmdori haqidagi eng to‘liq portal: qahramonlar, xaritalar, sarguzashtlar va afsonalar.">
+<meta name="keywords" content="Uzuklar hukmdori, Lord of the Rings, qahramonlar, sarguzasht, fantasy, Tolkien">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://uzuklarhukumdori.com/" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Enter the Realm of the Rings — a fantasy portal of legends, maps, and heroes.">
+  <meta name="msapplication-TileColor" content="#0f0f0f" />
+  <meta property="og:title" content="Realm of the Rings" />
+  <meta property="og:description" content="A fantasy portal of legends, maps, and heroes." />
+  <meta property="og:image" content="assets/images/ring-icon.png" />
+  <meta property="og:type" content="website" />
+  <title>Realm of the Rings</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/images/ring-icon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Spectral:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 🔱 Header -->
+  <header role="banner" class="site-header">
+    <div class="logo">
+      <img src="assets/images/ring-icon.png" alt="Ring Logo" />
+      <h1>Realm of the Rings</h1>
+    </div>
+    <nav role="navigation" aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="films.html" target="_blank">Films</a></li>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#heroes">Heroes</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#lore">Lore</a></li>
+        <li><a href="#contact">Join</a></li>
+        <li><a href="stats.html">Stats</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+        <li><a href="admin.html">Admin</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🎥 Hero Section with Video Background -->
+  <section class="hero" aria-label="Hero Banner">
+    <video autoplay muted loop id="heroVideo">
+      <source src="assets/videos/middle-earth.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+      <h2>“One realm to rule them all...”</h2>
+      <a href="#intro" class="btn">Enter the Realm</a>
+    </div>
+  </section>
+  
+
+  <!-- 🧾 Main Content -->
+  <main>
+
+    <!-- 📜 Intro -->
+    <section id="intro" class="intro">
+      <h2>The Legend Begins</h2>
+      <p>In the Second Age, the rings were forged in secret. Power, corruption, and destiny intertwined in the shadows of Mount Doom.</p>
+      <blockquote cite="https://tolkiengateway.net">
+        “Nine for Mortal Men doomed to die, One for the Dark Lord on his dark throne...”
+      </blockquote>
+    </section>
+    <section id="comments" class="comments">
+  <h2>What do you think of our heroes?</h2>
+  <form id="commentForm">
+    <textarea id="commentText" placeholder="Write your thoughts..." required></textarea>
+    <button type="submit">Post Comment</button>
+  </form>
+  <div id="commentList"></div>
+</section>
+
+
+    <!-- 🧝‍♂️ Heroes (loaded dynamically) -->
+    <section id="heroes" class="heroes">
+      <h2>Legendary Heroes</h2>
+      <div class="hero-grid" id="heroGrid">
+        <!-- Qahramonlar JavaScript orqali yuklanadi -->
+      </div>
+    </section>
+    <!-- 🪟 Qahramon modal oynasi -->
+<div id="hero-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-hero-modal" class="close-btn">&times;</span>
+    <img id="modal-hero-image" src="" alt="" />
+    <h3 id="modal-hero-name"></h3>
+    <h4 id="modal-hero-title"></h4>
+    <p id="modal-hero-bio"></p>
+  </div>
+</div>
+
+
+    <!-- 🗺️ Interactive Map -->
+    <section id="map" class="map">
+      <h2>Explore Middle-earth</h2>
+      <div class="map-container">
+        <img src="assets/images/middle-earth-map.jpg" alt="Map of Middle-earth" usemap="#middleearth" />
+        <map name="middleearth">
+          <area shape="circle" coords="300,220,30" href="#" alt="Rivendell" data-location="Rivendell" />
+          <area shape="circle" coords="500,400,30" href="#" alt="Mordor" data-location="Mordor" />
+          <area shape="circle" coords="200,350,30" href="#" alt="Gondor" data-location="Gondor" />
+        </map>
+      </div>
+    </section>
+    <section id="films" class="films">
+  <h2>The Lord of the Rings Films</h2>
+
+  <div class="video-grid">
+    <iframe src="https://www.youtube.com/embed/0K7V8SNa8KE" title="The Lord of the Rings Trilogy: A Dying Legacy?" allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/9kzhX7e6r6Q" title="What Are The Biggest Lies The Lord of the Rings Movies Told ..." allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/SIfnXiWsgkw" title="The LORD OF THE RINGS Films | A Complete Retrospective" allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/_KVIElXsDX8" title="Lord of the Rings: Why It Remains Undefeated" allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/EpH28dPyXbM" title="The Problem with 'Lord of the Rings' movies" allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/w8a8Qdfmko4" title="I'm Worried About the New Lord of the Rings Movie" allowfullscreen></iframe>
+  </div>
+</section>
+
+
+    <!-- 📚 Lore -->
+    <section id="lore" class="lore">
+      <h2>Ancient Lore</h2>
+      <details>
+        <summary>What are the Rings of Power?</summary>
+        <p>The Rings of Power were magical artifacts created by the Elves and corrupted by Sauron to control the free peoples of Middle-earth.</p>
+      </details>
+      <details>
+        <summary>Who is Sauron?</summary>
+        <p>Sauron is the Dark Lord, servant of Morgoth, and creator of the One Ring to dominate all others.</p>
+      </details>
+    </section>
+
+    <!-- 📬 Contact Form -->
+    <section id="contact" class="contact">
+      <h2>Join the Fellowship</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="race">Race:</label>
+        <select id="race" name="race">
+          <option>Elf</option>
+          <option>Human</option>
+          <option>Dwarf</option>
+          <option>Hobbit</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="button" class="btn" data-message="You have summoned the Ring!">Click Me</button>
+        <button type="submit">Send Raven</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ⚓ Footer -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 Realm of the Rings. Forged in code and lore.</p>
+  </footer>
+
+  <!-- 🪟 Modal Container -->
+  <div id="modal-container" class="modal">
+    <div class="modal-content">
+      <h3 id="modal-message">The Dark Lord is watching...</h3>
+      <button id="close-modal">Close</button>
+    </div>
+  </div>
+
+  <!-- 💻 JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

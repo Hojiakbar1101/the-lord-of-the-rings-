@@ -1,0 +1,20 @@
+[
+  {
+    "username": "admin",
+    "email": "admin@realm.com",
+    "password": "admin123",
+    "isAdmin": true,
+    "avatar": "assets/images/admin.jpg",
+    "bio": "Guardian of the Realm.",
+    "interests": ["Lore", "Maps", "Elven History"]
+  },
+  {
+    "username": "frodo",
+    "email": "frodo@shire.com",
+    "password": "ringbearer",
+    "isAdmin": false,
+    "avatar": "assets/images/frodo.jpg",
+    "bio": "Just a hobbit from the Shire.",
+    "interests": ["Adventure", "Friendship", "Courage"]
+  }
+]

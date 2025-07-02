@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stats – Realm of the Rings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="stats">
+    <h2>Site Stats</h2>
+    <ul>
+      <li>Total Registered Users: <span id="userCount">1</span></li>
+      <li>Most Watched Film: <span>The Return of the King</span></li>
+      <li>Top Commenter: <span>Coming soon...</span></li>
+    </ul>
+  </section>
+  <script>
+    const user = localStorage.getItem('user');
+    document.getElementById('userCount').textContent = user ? '1' : '0';
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Aragorn",
+    "image": "assets/images/aragorn.jpg",
+    "title": "Heir of Isildur",
+    "description": "Ranger of the North and King of Gondor.",
+    "bio": "Aragorn, son of Arathorn, is the last descendant of Isildur. He wandered the wilds as a ranger before claiming his rightful throne in Gondor. A brave warrior and wise leader."
+  },
+  {
+    "name": "Galadriel",
+    "image": "assets/images/galadriel.jpg",
+    "title": "Lady of Lothlórien",
+    "description": "Bearer of Nenya, wise and powerful elf.",
+    "bio": "Galadriel is one of the oldest and most powerful Elves in Middle-earth. She rules Lothlórien with grace and foresight, and bears one of the Three Elven Rings."
+  },
+  {
+    "name": "Gandalf",
+    "image": "assets/images/gandalf.jpg",
+    "title": "Wizard of the Istari",
+    "description": "Wielder of fire, guide of the Fellowship.",
+    "bio": "Gandalf the Grey, later Gandalf the White, is a Maia spirit sent to aid Middle-earth. He is wise, kind, and powerful — a beacon of hope against the darkness."
+  }
+]

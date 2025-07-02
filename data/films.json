@@ -1,0 +1,23 @@
+[
+  {
+    "title": "The Fellowship of the Ring",
+    "thumbnail": "assets/images/fellowship.jpg",
+    "year": 2001,
+    "duration": "2h 58m",
+    "link": "https://uzmovi.info/tarjima-kinolar/1933-uzuklar-hukumdori-1-uzbek-tilida.html"
+  },
+  {
+    "title": "The Two Towers",
+    "thumbnail": "assets/images/two-towers.jpg",
+    "year": 2002,
+    "duration": "2h 59m",
+    "link": "https://uzmovi.tv/tarjima-kinolarri/346-uzuklar-hukumdori-1-2-3-qism-barcha-qismlari-uzbek-ozbek-tilida/episode/18004/2.html"
+  },
+  {
+    "title": "The Return of the King",
+    "thumbnail": "assets/images/return-king.jpg",
+    "year": 2003,
+    "duration": "3h 21m",
+    "link": "https://uzmovi.tv/tarjima-kinolarri/346-uzuklar-hukumdori-1-2-3-qism-barcha-qismlari-uzbek-ozbek-tilida/episode/18004/3.html"
+  }
+]

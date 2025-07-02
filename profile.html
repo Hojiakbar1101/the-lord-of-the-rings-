@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile – Realm of the Rings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🔱 Header (agar kerak bo‘lsa) -->
+  <header class="site-header">
+    <div class="logo">
+      <img src="assets/images/ring-icon.png" alt="Ring Logo" />
+      <h1>Realm of the Rings</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" onclick="logout()">Log out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 👤 My Profile Section -->
+  <section class="profile">
+    <h2>My Profile</h2>
+    <img id="avatar" class="avatar" src="assets/images/default-avatar.png" alt="Avatar" />
+    <label for="uploadAvatar">Upload avatar:</label>
+    <input type="file" id="uploadAvatar" accept="image/*" title="Choose an avatar image" />
+    <p><strong>Username:</strong> <span id="username"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Bio:</strong></p>
+    <textarea id="bio" rows="3" placeholder="Write your story..."></textarea>
+    <p><strong>Interests:</strong></p>
+    <input type="text" id="interests" placeholder="Comma-separated (e.g. Lore, Maps)" />
+    <button onclick="saveProfile()">Save Changes</button>
+    <button onclick="logout()">Log out</button>
+  </section>
+
+  <!-- 💻 JavaScript -->
+  <script src="auth.js"></script>
+  <script>
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (!user) window.location.href = 'login.html';
+
+    document.getElementById('username').textContent = user.username;
+    document.getElementById('email').textContent = user.email;
+    document.getElementById('bio').value = user.bio || '';
+    document.getElementById('interests').value = user.interests?.join(', ') || '';
+    document.getElementById('avatar').src = user.avatar || 'assets/images/default-avatar.png';
+
+    document.getElementById('uploadAvatar').addEventListener('change', (e) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        document.getElementById('avatar').src = reader.result;
+        user.avatar = reader.result;
+      };
+      reader.readAsDataURL(e.target.files[0]);
+    });
+
+    function saveProfile() {
+      user.bio = document.getElementById('bio').value;
+      user.interests = document.getElementById('interests').value.split(',').map(i => i.trim());
+      localStorage.setItem('user', JSON.stringify(user));
+
+      const users = JSON.parse(localStorage.getItem('users') || '[]');
+      const index = users.findIndex(u => u.email === user.email);
+      if (index !== -1) {
+        users[index] = user;
+        localStorage.setItem('users', JSON.stringify(users));
+      }
+
+      alert("Profile updated!");
+    }
+  </script>
+</body>
+</html>
